@@ -1,16 +1,18 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, Image, StyleSheet, Dimensions, } from 'react-native';
+import { useFonts } from 'expo-font';
+import Fonts from '../../constants/fonts';
+
 
 const HomeScreen = () => {
   const screenWidth = Dimensions.get('window').width;
+
+  const [fontsLoaded] = useFonts({
+    AlexBrush: Fonts.AlexBrush,
+  });
+
+  if (!fontsLoaded) return null;
+
 
   return (
     <SafeAreaView style={styles.container}>
@@ -156,6 +158,7 @@ const styles = StyleSheet.create({
     fontSize: 38,
     textAlign: "center",
     marginBottom: 13,
+    fontFamily: 'AlexBrush'
   },
   mainInput: {
     color: "#3E3E3E",

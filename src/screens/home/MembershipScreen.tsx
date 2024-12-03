@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { useFonts } from 'expo-font';
+import Fonts from '../../constants/fonts';
 
 const MembershipScreen = () => {
   const [selectedSection, setSelectedSection] = useState('section1');
+
+  const [fontsLoaded] = useFonts({
+    AlegreyaSans: Fonts.AlegreyaSans,
+    Bold: Fonts.AlegreyaSansBold,
+
+  });
+
+  if (!fontsLoaded) return null;
 
   const renderContent = () => {
     if (selectedSection === 'section1') {
@@ -17,7 +20,8 @@ const MembershipScreen = () => {
         <ScrollView contentContainerStyle={styles.contentContainer}>
           <Text style={styles.text}>Meditaciones</Text>
           <Text style={styles.paragraph}>
-            Aqui se mostraran todas las Meditaciones</Text>
+            Aquí se mostrarán todas las Meditaciones
+          </Text>
         </ScrollView>
       );
     }
@@ -27,7 +31,8 @@ const MembershipScreen = () => {
         <ScrollView contentContainerStyle={styles.contentContainer}>
           <Text style={styles.text}>Hipnosis</Text>
           <Text style={styles.paragraph}>
-            Aqui se mostraran todas las Hipnosis</Text>
+            Aquí se mostrarán todas las Hipnosis
+          </Text>
         </ScrollView>
       );
     }
@@ -48,7 +53,8 @@ const MembershipScreen = () => {
               styles.titleText,
               selectedSection === 'section1' && styles.activeText,
             ]}
-          >Meditaciones
+          >
+            Meditaciones
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -63,7 +69,8 @@ const MembershipScreen = () => {
               styles.titleText,
               selectedSection === 'section2' && styles.activeText,
             ]}
-          >Hipnosis
+          >
+            Hipnosis
           </Text>
         </TouchableOpacity>
       </View>
@@ -98,9 +105,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: '#C88676',
+    fontFamily: 'Bold',
   },
   activeText: {
     color: '#FCF8F7',
+    fontFamily: 'Bold',
   },
   content: {
     flex: 1,
@@ -116,6 +125,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
     marginBottom: 10,
+    fontFamily: 'AlegreyaSans',
   },
   paragraph: {
     fontSize: 16,
@@ -123,6 +133,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 20,
     marginTop: 10,
+    fontFamily: 'AlegreyaSans',
   },
 });
 

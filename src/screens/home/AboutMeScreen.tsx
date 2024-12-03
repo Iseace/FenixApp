@@ -1,9 +1,15 @@
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
-
+import { useFonts } from 'expo-font';
+import Fonts from '../../constants/fonts';
 import images from '../../constants/imgs';
 
 const AboutScreen = () => {
+
+  const [fontsLoaded] = useFonts({
+    AlexBrush: Fonts.AlexBrush,
+  });
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.section}>

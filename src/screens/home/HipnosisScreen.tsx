@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { useFonts } from 'expo-font';
+import Fonts from '../../constants/fonts';
 
 const HipnosisScreen = () => {
   const [selectedSection, setSelectedSection] = useState('section1');
+
+  const [fontsLoaded] = useFonts({
+    AlegreyaSans: Fonts.AlegreyaSans,
+    Bold: Fonts.AlegreyaSansBold,
+
+  });
+
+  if (!fontsLoaded) return null;
 
   const renderContent = () => {
     if (selectedSection === 'section1') {
@@ -102,9 +105,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: '#C88676',
+    fontFamily: 'Bold',
   },
   activeText: {
     color: '#FCF8F7',
+    fontFamily: 'Bold',
   },
   content: {
     flex: 1,
@@ -120,6 +125,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
     marginBottom: 10,
+    fontFamily: 'AlegreyaSans',
   },
   paragraph: {
     fontSize: 16,
@@ -127,6 +133,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 20,
     marginTop: 10,
+    fontFamily: 'AlegreyaSans',
   },
 });
 

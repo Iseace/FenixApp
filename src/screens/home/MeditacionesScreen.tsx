@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, TouchableOpacity, StyleSheet, } from 'react-native';
+import { useFonts } from 'expo-font';
+import Fonts from '../../constants/fonts';
 
 const MeditacionesScreen = () => {
   const [selectedSection, setSelectedSection] = useState('section1');
+
+  const [fontsLoaded] = useFonts({
+    AlegreyaSans: Fonts.AlegreyaSans,
+    Bold: Fonts.AlegreyaSansBold,
+
+  });
+
+  if (!fontsLoaded) return null;
 
   const renderContent = () => {
     if (selectedSection === 'section1') {
@@ -17,7 +20,7 @@ const MeditacionesScreen = () => {
         <ScrollView contentContainerStyle={styles.contentContainer}>
           <Text style={styles.text}>Meditaciones</Text>
           <Text style={styles.paragraph}>
-            Aqui se mostraran las meditaciones que has comprado
+            Aquí se mostrarán las meditaciones que has comprado
           </Text>
         </ScrollView>
       );
@@ -28,7 +31,7 @@ const MeditacionesScreen = () => {
         <ScrollView contentContainerStyle={styles.contentContainer}>
           <Text style={styles.text}>Meditaciones</Text>
           <Text style={styles.paragraph}>
-            Aqui s mostraran las meditaciones que puedes comprar
+            Aquí se mostrarán las meditaciones que puedes comprar
           </Text>
         </ScrollView>
       );
@@ -50,7 +53,9 @@ const MeditacionesScreen = () => {
               styles.titleText,
               selectedSection === 'section1' && styles.activeText,
             ]}
-          >Mis Meditaciones</Text>
+          >
+            Mis Meditaciones
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[
@@ -64,7 +69,9 @@ const MeditacionesScreen = () => {
               styles.titleText,
               selectedSection === 'section2' && styles.activeText,
             ]}
-          >Mas meditaciones</Text>
+          >
+            Más Meditaciones
+          </Text>
         </TouchableOpacity>
       </View>
 
@@ -73,6 +80,7 @@ const MeditacionesScreen = () => {
     </SafeAreaView>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -97,9 +105,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: '#C88676',
+    fontFamily: 'Bold',
   },
   activeText: {
     color: '#FCF8F7',
+    fontFamily: 'Bold',
   },
   content: {
     flex: 1,
@@ -115,6 +125,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
     marginBottom: 10,
+    fontFamily: 'Bold',
   },
   paragraph: {
     fontSize: 16,
@@ -122,6 +133,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 20,
     marginTop: 10,
+    fontFamily: 'AlegreyaSans',
   },
 });
 
