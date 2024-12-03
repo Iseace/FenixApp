@@ -8,6 +8,8 @@ const AboutScreen = () => {
 
   const [fontsLoaded] = useFonts({
     AlexBrush: Fonts.AlexBrush,
+    AlegreyaSans: Fonts.AlegreyaSans,
+    Bold: Fonts.AlegreyaSansBold,
   });
 
   return (
@@ -133,6 +135,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
   heading: {
+    fontFamily: 'AlexBrush',
     fontSize: 38,
     fontWeight: 'bold',
     marginBottom: 12,
@@ -140,13 +143,14 @@ const styles = StyleSheet.create({
     color: '#CF8C7B',
   },
   title: {
+    fontFamily: 'Bold',
     fontSize: 20,
-    fontWeight: 'bold',
     marginBottom: 12,
     textAlign: 'center',
     color: '#723C2E',
   },
   paragraph: {
+    fontFamily: 'AlegreyaSans',
     fontSize: 16,
     marginBottom: 8,
     textAlign: 'center',
@@ -156,6 +160,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   list: {
+    fontFamily: 'AlegreyaSans',
     fontSize: 16,
     marginBottom: 8,
     textAlign: 'center',

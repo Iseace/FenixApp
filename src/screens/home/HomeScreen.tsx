@@ -9,6 +9,7 @@ const HomeScreen = () => {
 
   const [fontsLoaded] = useFonts({
     AlexBrush: Fonts.AlexBrush,
+
   });
 
   if (!fontsLoaded) return null;
