@@ -1,12 +1,12 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import HomeScreen from '../src/screens/home/HomeScreen';
-import MediaScreen from '../src/screens/home/ToolsScreen';
-import ShopScreen from '../src/screens/home/ShopScren';
-import MembershipScreen from '../src/screens/home/MembershipScreen';
-import AboutMe from '../src/screens/home/AboutMeScreen';
-import HipnosisScreen from '../src/screens/home/HipnosisScreen';
-import MeditacionesScreen from '../src/screens/home/MeditacionesScreen';
+import HomeScreen from '../src/views/main/HomeView';
+import MediaScreen from '../src/views/main/ToolsView';
+import ShopScreen from '../src/views/main/ShopView';
+import MembershipScreen from '../src/views/main/MembershipView';
+import AboutMe from '../src/views/main/AboutMeView';
+import HipnosisScreen from '../src/views/main/HipnosisView';
+import MeditacionesScreen from '../src/views/main/MeditacionesView';
 
 
 const Drawer = createDrawerNavigator();
@@ -26,7 +26,6 @@ function DrawerNavigator() {
       <Drawer.Screen name="About" component={AboutMe} />
       <Drawer.Screen name="Meditaciones" component={MeditacionesScreen} />
       <Drawer.Screen name="Hipnosis" component={HipnosisScreen} />
-
     </Drawer.Navigator>
   );
 }

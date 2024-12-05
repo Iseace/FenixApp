@@ -10,7 +10,11 @@ const AboutScreen = () => {
     AlexBrush: Fonts.AlexBrush,
     AlegreyaSans: Fonts.AlegreyaSans,
     Bold: Fonts.AlegreyaSansBold,
+
   });
+
+  if (!fontsLoaded) return null;
+
 
   return (
     <ScrollView style={styles.container}>
@@ -137,7 +141,6 @@ const styles = StyleSheet.create({
   heading: {
     fontFamily: 'AlexBrush',
     fontSize: 38,
-    fontWeight: 'bold',
     marginBottom: 12,
     textAlign: 'center',
     color: '#CF8C7B',

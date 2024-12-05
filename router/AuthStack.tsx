@@ -4,9 +4,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import images from '../src/constants/imgs';
 
-import LoginPage from '../src/screens/auth/Login';
-import RegisterPage from '../src/screens/auth/Register';
-import ForgotPassPage from '../src/screens/auth/ForgotPass';
+import LoginPage from '../src/views/auth/LoginView';
+import RegisterPage from '../src/views/auth/RegisterView';
+import ForgotPassPage from '../src/views/auth/ForgotPView';
 import DrawerNavigator from './DrawerNav';
 
 const Stack = createNativeStackNavigator();
