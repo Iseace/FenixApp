@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { Video, ResizeMode } from 'expo-av'; // Import video component
 import VideoBack from './../../../assets/Vids/video.mp4';
+
+import Colors from '../../constants/colors';
 const LoginView = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -87,24 +89,23 @@ const styles = StyleSheet.create({
   input: {
     width: '100%',
     height: 52,
-    borderColor: '#FFFFFF',
+    borderColor: Colors.WHITE,
     borderWidth: 2,
     borderRadius: 8,
     paddingHorizontal: 10,
     marginBottom: 15,
-    backgroundColor: '#F9FAFB',
-    color: '#000',
+    backgroundColor: Colors.PALE_GRAY,
   },
   button: {
     width: '100%',
     height: 52,
-    backgroundColor: '#CF8C7B',
+    backgroundColor: Colors.WARM_PINK,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 8,
   },
   buttonText: {
-    color: '#F9FAFB',
+    color: Colors.PALE_GRAY,
     fontSize: 15,
     fontWeight: 'bold',
   },
@@ -112,7 +113,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   linkText: {
-    color: '#723C2E',
+    color: Colors.DARK_TERRACOTTA,
     fontSize: 15,
     textDecorationLine: 'underline',
     textAlign: "center",

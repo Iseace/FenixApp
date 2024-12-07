@@ -5,6 +5,7 @@ const images = {
   Wendy3: require('../../assets/Wendy/wendy-21.jpg'),
   Wendy4: require('../../assets/Wendy/wendy-24.jpg'),
   Wendy5: require('../../assets/Wendy/wendy-30.jpg'),
+  UrgentConsult: require('../../assets/imgs/urgent.jpg')
 };
 
 export default images;

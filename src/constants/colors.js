@@ -1,12 +1,10 @@
-export default {
-  gradientForm: '#A376F1',
-  primary: '#7d5fff',
-  white: '#FFFFFF',
-  dark: '#444',
-  bgColor: '#82ccdd',
-  warning: '#f0d500',
-  danger: '#FF0D0E',
-  gray: '#666666',
-  grayLight: '#ccc',
-  black: '#0a0a0a',
+const Colors = {
+  WARM_PINK: '#CF8C7B',
+  DARK_TERRACOTTA: '#723C2E',
+  SOFT_WHITE: '#FCF8F7',
+  SOFT_BLACK: '#3E3E3E',
+  PALE_GRAY: '#F9FAFB',
+  WHITE: '#FFFFFF'
 };
+
+export default Colors;

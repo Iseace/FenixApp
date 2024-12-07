@@ -9,6 +9,8 @@ import RegisterPage from '../src/views/auth/RegisterView';
 import ForgotPassPage from '../src/views/auth/ForgotPView';
 import DrawerNavigator from './DrawerNav';
 
+import { ROUTES } from './routes';
+
 const Stack = createNativeStackNavigator();
 
 function AuthStack() {
@@ -25,29 +27,29 @@ function AuthStack() {
         },
         headerRight: () => (
           <Image
-            source={images.logo} // Replace with your logo path
+            source={images.logo}
             style={styles.logo}
           />
         ),
       }}
     >
       <Stack.Screen
-        name="Login"
+        name={ROUTES.STACK.LOGIN}
         component={LoginPage}
         options={{ headerShown: true }}
       />
       <Stack.Screen
-        name="Register"
+        name={ROUTES.STACK.REGISTER}
         component={RegisterPage}
         options={{ headerShown: true }}
       />
       <Stack.Screen
-        name="ForgotPass"
+        name={ROUTES.STACK.FORGOT_PASSWORD}
         component={ForgotPassPage}
         options={{ headerShown: true }}
       />
       <Stack.Screen
-        name="Home"
+        name={ROUTES.STACK.HOME}
         component={DrawerNavigator}
         options={{ headerShown: false }}
       />
@@ -57,11 +59,12 @@ function AuthStack() {
 
 const styles = StyleSheet.create({
   logo: {
-    width: 40, // Adjust width
-    height: 40, // Adjust height
+    width: 40,
+    height: 40,
     resizeMode: 'contain',
-    marginRight: 10, // Add some margin if needed
+    marginRight: 10,
   },
 });
 
 export default AuthStack;
+

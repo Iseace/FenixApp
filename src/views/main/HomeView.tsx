@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeAreaView, ScrollView, View, Text, Image, StyleSheet, Dimensions, } from 'react-native';
 import { useFonts } from 'expo-font';
 import Fonts from '../../constants/fonts';
+import Colors from '../../constants/colors';
 
 
 const HomeScreen = () => {
@@ -116,14 +117,14 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F9FAFB",
+    backgroundColor: Colors.PALE_GRAY,
   },
   scrollView: {
     paddingVertical: 16,
   },
   column: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#CF8C7B",
+    backgroundColor: Colors.WHITE,
+    borderColor: Colors.WARM_PINK,
     borderRadius: 12,
     borderWidth: 1,
     paddingVertical: 14,
@@ -136,7 +137,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   card: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: Colors.WHITE,
     borderRadius: 12,
     padding: 8,
     marginHorizontal: 8,
@@ -155,36 +156,36 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   title: {
-    color: "#C88676",
+    color: Colors.WARM_PINK,
     fontSize: 38,
     textAlign: "center",
     marginBottom: 13,
     fontFamily: 'AlexBrush'
   },
   mainInput: {
-    color: "#3E3E3E",
+    color: Colors.SOFT_BLACK,
     fontSize: 16,
     textAlign: "center",
     marginHorizontal: 9,
   },
   SubTitle: {
-    color: "#C88676",
+    color: Colors.WARM_PINK,
     fontSize: 20,
     textAlign: "center",
     marginBottom: 10,
   },
   CardTitle: {
-    color: "#723C2E",
+    color: Colors.DARK_TERRACOTTA,
     fontSize: 14,
     textAlign: "center",
   },
   BtnText: {
-    color: "#FFFFFF",
+    color: Colors.WHITE,
     fontSize: 14,
   },
   BtnContainer: {
     alignItems: "center",
-    backgroundColor: "#CF8C7B",
+    backgroundColor: Colors.WARM_PINK,
     borderRadius: 34,
     paddingVertical: 5,
     marginBottom: 23,

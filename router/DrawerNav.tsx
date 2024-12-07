@@ -1,31 +1,34 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import HomeScreen from '../src/views/main/HomeView';
-import MediaScreen from '../src/views/main/ToolsView';
-import ShopScreen from '../src/views/main/ShopView';
-import MembershipScreen from '../src/views/main/MembershipView';
-import AboutMe from '../src/views/main/AboutMeView';
-import HipnosisScreen from '../src/views/main/HipnosisView';
-import MeditacionesScreen from '../src/views/main/MeditacionesView';
+import HomeView from '../src/views/main/HomeView';
+import MediaView from '../src/views/main/ToolsView';
+import ShopView from '../src/views/main/ShopView';
+import MembershipView from '../src/views/main/MembershipView';
+import AboutMeView from '../src/views/main/AboutMeView';
+import HipnosisView from '../src/views/main/HipnosisView';
+import MeditacionesView from '../src/views/main/MeditacionesView';
+import HealingView from '../src/views/sessions/HealingView';
+import KidsHealingView from '../src/views/sessions/KidsHealingView'
+import UrgentView from '../src/views/sessions/UrgentView';
+
+import { ROUTES, DRAWER_CONFIG } from './routes';
 
 
 const Drawer = createDrawerNavigator();
 
 function DrawerNavigator() {
   return (
-    <Drawer.Navigator
-      screenOptions={{
-        headerTitle(props) {
-          false
-        },
-      }}>
-      <Drawer.Screen name="Home" component={HomeScreen} />
-      <Drawer.Screen name="Media" component={MediaScreen} />
-      <Drawer.Screen name="Shop" component={ShopScreen} />
-      <Drawer.Screen name="Membership" component={MembershipScreen} />
-      <Drawer.Screen name="About" component={AboutMe} />
-      <Drawer.Screen name="Meditaciones" component={MeditacionesScreen} />
-      <Drawer.Screen name="Hipnosis" component={HipnosisScreen} />
+    <Drawer.Navigator screenOptions={DRAWER_CONFIG.screenOptions}>
+      <Drawer.Screen name={ROUTES.DRAWER.HOME} component={HomeView} />
+      <Drawer.Screen name={ROUTES.DRAWER.MEDIA} component={MediaView} />
+      <Drawer.Screen name={ROUTES.DRAWER.SHOP} component={ShopView} />
+      <Drawer.Screen name={ROUTES.DRAWER.MEMBERSHIP} component={MembershipView} />
+      <Drawer.Screen name={ROUTES.DRAWER.ABOUT_ME} component={AboutMeView} />
+      <Drawer.Screen name={ROUTES.DRAWER.MEDITATIONS} component={MeditacionesView} />
+      <Drawer.Screen name={ROUTES.DRAWER.HYPNOSIS} component={HipnosisView} />
+      <Drawer.Screen name={ROUTES.DRAWER.HEALING} component={HealingView} />
+      <Drawer.Screen name={ROUTES.DRAWER.HEALING_KIDS} component={KidsHealingView} />
+      <Drawer.Screen name={ROUTES.DRAWER.URGENT} component={UrgentView} />
     </Drawer.Navigator>
   );
 }

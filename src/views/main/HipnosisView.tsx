@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SafeAreaView, ScrollView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 import Fonts from '../../constants/fonts';
+import Colors from '../../constants/colors';
 
 const HipnosisScreen = () => {
   const [selectedSection, setSelectedSection] = useState('section1');
@@ -84,7 +85,7 @@ const HipnosisScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F9FAFB',
+    backgroundColor: Colors.PALE_GRAY,
   },
   header: {
     flexDirection: 'row',
@@ -103,11 +104,11 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 16,
-    color: '#C88676',
+    color: Colors.WARM_PINK,
     fontFamily: 'Bold',
   },
   activeText: {
-    color: '#FCF8F7',
+    color: Colors.SOFT_WHITE,
     fontFamily: 'Bold',
   },
   content: {

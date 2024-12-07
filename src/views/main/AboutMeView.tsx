@@ -3,6 +3,7 @@ import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
 import { useFonts } from 'expo-font';
 import Fonts from '../../constants/fonts';
 import images from '../../constants/imgs';
+import Colors from '../../constants/colors';
 
 const AboutScreen = () => {
 
@@ -20,7 +21,7 @@ const AboutScreen = () => {
     <ScrollView style={styles.container}>
       <View style={styles.section}>
         <Text style={styles.heading}>Sobre Mi</Text>
-        <Image source={images.Wendy2} style={styles.imageRectangular} />
+        <Image source={images.Wendy2} style={styles.image} />
       </View>
       <Text style={styles.title}>¡Hola, es un gusto tenerte por aquí!</Text>
       <Text style={styles.paragraph}>
@@ -53,7 +54,7 @@ const AboutScreen = () => {
         – Constelaciones Familiares
       </Text>
       <View style={styles.section}>
-        <Image source={images.Wendy4} style={styles.imageRectangular} />
+        <Image source={images.Wendy4} style={styles.image} />
         <Text style={styles.title}>
           Tengo mi <Text style={styles.bold}>consulta privada</Text> de manera presencial y online a cualquier parte del mundo (hay lista de espera para consultas 1:1, te agradezco tu confianza y paciencia).
         </Text>
@@ -69,7 +70,7 @@ const AboutScreen = () => {
       </Text>
       <Text style={styles.paragraph}>¡Te ayudo a renacer desde tus cenizas con fuerza y sabiduría!</Text>
       <View style={styles.section}>
-        <Image source={images.Wendy2} style={styles.imageRectangular} />
+        <Image source={images.Wendy2} style={styles.image} />
         <Text style={styles.title}>
           Mi nombre Wendy significa: “la que es amiga de verdad”
         </Text>
@@ -83,7 +84,7 @@ const AboutScreen = () => {
       <Text style={styles.paragraph}>Soy semilla estelar y no es coincidencia que estés aquí.</Text>
       <Text style={styles.paragraph}>Gracias por estar aquí, juntos, somos luz: {'\n'}Tu amiga y guía</Text>
       <View style={styles.section}>
-        <Image source={images.Wendy1} style={styles.imageRectangular} />
+        <Image source={images.Wendy1} style={styles.image} />
         <Text style={styles.title}>Misión</Text>
       </View>
       <Text style={styles.paragraph}>
@@ -119,45 +120,39 @@ const AboutScreen = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.PALE_GRAY,
   },
   section: {
     alignItems: 'center',
     marginBottom: 16,
   },
-  imageRectangular: {
+  image: {
     width: '100%',
     height: 180,
     marginBottom: 8,
     resizeMode: 'cover',
     borderRadius: 8,
   },
-  image: {
-    width: 100,
-    height: 100,
-    marginBottom: 8,
-    borderRadius: 50,
-  },
   heading: {
     fontFamily: 'AlexBrush',
     fontSize: 38,
     marginBottom: 12,
     textAlign: 'center',
-    color: '#CF8C7B',
+    color: Colors.WARM_PINK,
   },
   title: {
     fontFamily: 'Bold',
     fontSize: 20,
     marginBottom: 12,
     textAlign: 'center',
-    color: '#723C2E',
+    color: Colors.DARK_TERRACOTTA,
   },
   paragraph: {
     fontFamily: 'AlegreyaSans',
     fontSize: 16,
     marginBottom: 8,
     textAlign: 'center',
-    color: '#3E3E3E',
+    color: Colors.SOFT_BLACK,
   },
   bold: {
     fontWeight: 'bold',
@@ -167,7 +162,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 8,
     textAlign: 'center',
-    color: '#3E3E3E',
+    color: Colors.SOFT_BLACK,
   },
 });
 

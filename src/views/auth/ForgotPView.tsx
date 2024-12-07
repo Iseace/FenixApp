@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 
+import Colors from '../../constants/colors';
+
 const ForgotPasswordView = ({ navigation }) => {
   const [email, setEmail] = useState('');
 
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#F9FAFB',
+    backgroundColor: Colors.PALE_GRAY,
   },
   subtitle: {
     fontSize: 16,

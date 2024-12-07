@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import Colors from '../../constants/colors';
 
 const RegisterView = ({ navigation }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
 
   const handleRegister = () => {
     if (!name || !email || !password) {
@@ -61,28 +63,28 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#F9FAFB', // Mismo color de fondo
+    backgroundColor: Colors.PALE_GRAY,
   },
   input: {
     width: '100%',
     height: 52,
-    borderColor: '#000000', // Mismo borde negro
+    borderColor: '#000000',
     borderWidth: 2,
     borderRadius: 8,
     paddingHorizontal: 10,
     marginBottom: 15,
-    backgroundColor: '#F9FAFB', // Fondo blanco-gris
+    backgroundColor: Colors.PALE_GRAY,
   },
   button: {
     width: '100%',
     height: 52,
-    backgroundColor: '#CF8C7B', // Mismo color del botón
+    backgroundColor: Colors.WARM_PINK,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 8,
   },
   buttonText: {
-    color: '#F9FAFB', // Texto blanco
+    color: Colors.PALE_GRAY,
     fontSize: 15,
     fontWeight: 'bold',
   },
@@ -90,7 +92,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   linkText: {
-    color: '#723C2E',
+    color: Colors.DARK_TERRACOTTA,
     fontSize: 15,
     textDecorationLine: 'underline',
     textAlign: "center",
